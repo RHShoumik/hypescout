@@ -1,0 +1,213 @@
+@import "../../variables.scss";
+
+.HowItWorks {
+    background-color: #F7F8FC;
+
+    &--heroBanner {
+        display: flex;
+        align-items: center;
+        padding-block: 75px;
+
+        @media (max-width: $small) {
+            flex-direction: column-reverse;
+            padding-block: 25px;
+        }
+
+        &--heroContent {
+
+            &--title {
+                font-size: 48px;
+                font-weight: 700;
+                line-height: 60px;
+                text-align: left;
+                color: $secondary-color;
+                margin-right: 167px;
+
+                span {
+                    color: $primary-color;
+                }
+
+                @media (max-width: $small) {
+                    margin-right: 0;
+                    font-size: 24px;
+                    line-height: 36px;
+                    text-align: center;
+                }
+            }
+
+            &--pragraph {
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 30px;
+
+                @media (max-width: $small) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-align: center;
+                }
+            }
+
+            &--heroButtonArea {
+                margin-top: 40px;
+
+                &--btnOutline {
+                    margin-right: 15px !important;
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    width: 150px;
+                    height: 50px;
+                }
+
+                &--btnFull {
+                    color: #fff !important;
+                    font-size: 14px !important;
+                    font-weight: 600 !important;
+                    background-color: $btn-primary !important;
+                    width: 150px;
+                    height: 50px;
+                }
+            }
+
+            @media (max-width: $small) {
+                text-align: center;
+            }
+        }
+
+        &--heroImage {
+            @media (max-width: $small) {
+                // padding: 10px;
+            }
+        }
+    }
+
+}
+
+.signupSteps {
+    margin: 50px 0px;
+
+    &--contents {
+        display: flex;
+        align-items: center;
+        gap: 100px;
+        padding: 50px 0px;
+
+        @media (max-width : $small) {
+            flex-direction: column;
+            gap: 0px;
+            padding: 0;
+        }
+
+        &--image {
+            border-radius: 18px;
+            box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.1);
+
+            img {
+                height: 572px;
+
+                @media (max-width : $small) {
+                    height: 340px;
+                }
+            }
+
+            @media (max-width : $small) {
+                margin-bottom: 30px;
+
+            }
+        }
+
+        &--contentArea {
+
+            &--steps {
+                margin-bottom: 50px;
+
+                &--highlightHeader {
+                    color: $heading-highlights-color;
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin: 0 !important;
+
+                    @media (max-width: $small) {
+                        font-size: 16px;
+                    }
+                }
+
+                &--header {
+                    color: $secondary-color;
+                    font-size: 30px;
+                    font-weight: 600;
+                    line-height: 30px;
+                    margin: 20px 0 25px 0 !important;
+
+                    @media (max-width : $small) {
+                        font-size: 24px;
+                        margin: 10px 0px 15px 0px !important;
+
+                    }
+                }
+
+                &--paragrapg {
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 35px;
+                    letter-spacing: 0px;
+                }
+
+                @media (max-width : $small ) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            @media (max-width : $small ) {
+                padding: 10px 15px;
+
+            }
+        }
+
+    }
+
+    &--secondContent {
+        @media (max-width : $small) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+}
+
+.loveByBrands {
+
+    background-color: #F7F8FC;
+    text-align: center;
+    padding: 100px 0px;
+
+    &--header {
+        color: $secondary-color;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 64px;
+        letter-spacing: 0px;
+    }
+
+    &--brandArea {
+        margin-top: 64px;
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: auto auto auto auto;
+        margin-bottom: 50px;
+
+        @media (max-width : $small) {
+            grid-template-columns: auto auto;
+            padding-inline: 10px;
+        }
+
+        &--logo {
+            text-align: center;
+            padding: 25px;
+
+            @media (max-width : $small) {
+                padding: 15px 0px;
+
+            }
+        }
+    }
+}

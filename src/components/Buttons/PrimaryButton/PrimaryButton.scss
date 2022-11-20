@@ -1,0 +1,10 @@
+@import "variables.scss";
+
+.PrimaryButton {
+    color: #fff !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    background-color: $btn-primary !important;
+    width: 150px;
+    height: 50px;
+}
