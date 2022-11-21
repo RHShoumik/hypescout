@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 
-import { Button, Container } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 
 import { brands } from "./const/brandList";
 
@@ -9,6 +9,7 @@ import howItWorksStepsImage1 from "../../assets/HowItWorks/HowItWorksStepsImage1
 import howItWorksStepsImage2 from "../../assets/HowItWorks/HowItWorksStepsImage2.png";
 import testimonialImage from "../../assets/HowItWorks/testimonialImage.png";
 
+import OutlineButton from "components/Buttons/OutlineButton/OutlineButton";
 import PrimaryButton from "components/Buttons/PrimaryButton/PrimaryButton";
 import QuotesIcon from "svgIcons/QuotesIcon";
 import "./HowItWorks.scss";
@@ -34,8 +35,8 @@ const HowItWorks = () => {
 							{/* <span className="feature-tag">Feature</span> */}
 							<p className="HowItWorks--heroBanner--heroContent--pragraph">A step by step guide to brand collaboration </p>
 							<div className="HowItWorks--heroBanner--heroContent--heroButtonArea">
-								<Button basic className="HowItWorks--heroBanner--heroContent--heroButtonArea--btnOutline">Watch Demo </Button>
-								<PrimaryButton />
+								<OutlineButton link="https://hypescout.co/" text= "Watch Demo"/>
+								<PrimaryButton link="https://hypescout.co/" text= "Book A Demo"/>
 							</div>
 						</div>
 						<div className="HowItWorks--heroBanner--heroImage">

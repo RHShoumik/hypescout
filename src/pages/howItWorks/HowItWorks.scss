@@ -2,6 +2,14 @@
 
 .HowItWorks {
     background-color: #F7F8FC;
+    background-image: url("../../assets/shapes/howItWorksHeroBannerShape1.svg"), url("../../assets/shapes/howItWorksHeroBannerShape2.svg");
+    background-position: left top, right bottom;
+    background-repeat: no-repeat, no-repeat;
+
+    @media (max-width : $small) {
+        background-size: 100px, 200px;
+
+    }
 
     &--heroBanner {
         display: flex;

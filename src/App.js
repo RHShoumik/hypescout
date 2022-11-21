@@ -1,10 +1,12 @@
 import React from 'react';
 
+import Loader from "components/Loader/Loader";
+
 const HowItWorks = React.lazy(() => import('./pages/howItWorks'));
 
 function App() {
 	return (
-		<React.Suspense fallback={<div>LOADING</div>}>
+		<React.Suspense fallback={<Loader />}>
 			<HowItWorks />
 		</React.Suspense>
 	);
