@@ -7,17 +7,19 @@ import { brands } from "./const/brandList";
 import HowItWorksHeroImage from "svgIcons/HowItWorksHeroImage";
 import howItWorksStepsImage1 from "../../assets/HowItWorks/HowItWorksStepsImage1.png";
 import howItWorksStepsImage2 from "../../assets/HowItWorks/HowItWorksStepsImage2.png";
-import testimonialImage from "../../assets/HowItWorks/testimonialImage.png";
 
 import OutlineButton from "components/Buttons/OutlineButton/OutlineButton";
 import PrimaryButton from "components/Buttons/PrimaryButton/PrimaryButton";
-import QuotesIcon from "svgIcons/QuotesIcon";
+import TestimonialCarousel from "components/TestimonialCarousel/TestimonialCarousel";
 import "./HowItWorks.scss";
+
+const SLIDE_COUNT = 4;
+const slides = Array.from(Array(SLIDE_COUNT).keys());
 
 const HowItWorks = () => {
 
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 460);
-	
+
 	useEffect(() => {
 	  
 	}, [isMobile])
@@ -103,25 +105,8 @@ const HowItWorks = () => {
 				</Container>
 			</div>
 
-			<div className="testimonials">
-				<div className="testimonials--image">
-					<img src={testimonialImage} alt="Testomonial" />
-				</div>
-				<div className="testimonials--contentArea">
-					<div className="testimonials--contentArea--inside">
-						<QuotesIcon />
-						<p className="testimonials--contentArea--inside--pragraph">At Pathao we always follow data-driven approach for everything. HypeScout‘s technology ensures that practice
-							in every step of the campaign, from planning to maximizing
-							the ROI.
-						</p>
-						<div className="testimonials--contentArea--inside--details">
-							<p className="testimonials--contentArea--inside--details--name">Sayeda Nabila Mahabub</p>
-							<p className="testimonials--contentArea--inside--details--designation">Director of Marketing & PR, Pathao</p>
-						</div>
-					</div>
-				</div>
+			<TestimonialCarousel slides={slides} />
 
-			</div>
 		</Fragment>
 	)
 }

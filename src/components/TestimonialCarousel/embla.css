@@ -1,0 +1,101 @@
+.embla {
+  position: relative;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.embla__viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.embla__viewport.is-draggable {
+  cursor: move;
+  cursor: grab;
+}
+
+.embla__viewport.is-dragging {
+  cursor: grabbing;
+}
+
+.embla__container {
+  display: flex;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  margin-left: -10px;
+}
+
+.embla__slide {
+  position: relative;
+  min-width: 100%;
+  padding-left: 10px;
+}
+
+.embla__slide__inner {
+  position: relative;
+  overflow: hidden;
+  height: 190px;
+}
+
+
+.embla__dots {
+  display: flex;
+  list-style: none;
+  justify-content:right;
+  margin-top: -145px;
+  padding-right: 600px;
+}
+@media only screen and (max-width: 460px){
+  .embla__dots{
+    justify-content:center;
+    margin-top: 0px;
+    padding-right: 0px;
+  }
+}
+.embla__dot {
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  margin-right: 1px;
+  margin-left: 1px;
+  display: flex;
+  align-items: center;
+}
+
+.embla__dot:after {
+  background-color: #C4CDD5;
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  content: "";
+}
+
+.embla__dot.is-selected:after {
+  background-color: #FFFFFF;
+  opacity: 1;
+  z-index: 1;
+}
+
+.big__dot.is-selected1{
+  position: relative;
+}
+
+.big__dot.is-selected1::after {
+  position: absolute;
+  border-radius: 100%;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-color: red;
+  opacity: 1;
+  top: 4px;
+  left: -6px;
+}
